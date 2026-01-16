@@ -338,7 +338,7 @@ export default function App() {
     },
     {
       id: 3,
-      title: "IMAGINEHACK 2025 (WARISAN DECODE)",
+      title: "ImagineHack 2025 (WARISAN DECODE)",
       category: "HACKATHON",
       description: "Warisan Decode is a gamified web experience designed to help users explore and understand Malaysia's rich heritage and cultural landmarks through interactive storytelling and puzzles.",
       technologies: ["HTML5", "CSS3", "JAVASCRIPT", "PHP", "MYSQL", "GIT"],
@@ -452,13 +452,26 @@ export default function App() {
 
               {/* Social Icons */}
               <div className="flex gap-3 mb-8">
-                <a href="#" className="w-10 h-10 rounded-full bg-purple-900/50 border border-purple-500/30 flex items-center justify-center text-white hover:bg-purple-500/30 transition-colors">
+                <a 
+                  href="https://www.linkedin.com/in/weifongwong" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-purple-900/50 border border-purple-500/30 flex items-center justify-center text-white hover:bg-purple-500/30 transition-colors"
+                >
                   <Linkedin className="w-5 h-5" />
                 </a>
-                <a href="#" className="w-10 h-10 rounded-full bg-purple-900/50 border border-purple-500/30 flex items-center justify-center text-white hover:bg-purple-500/30 transition-colors">
+                <a 
+                  href="https://github.com/WongWeiFong" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-purple-900/50 border border-purple-500/30 flex items-center justify-center text-white hover:bg-purple-500/30 transition-colors"
+                >
                   <Github className="w-5 h-5" />
                 </a>
-                <a href="#" className="w-10 h-10 rounded-full bg-purple-900/50 border border-purple-500/30 flex items-center justify-center text-white hover:bg-purple-500/30 transition-colors">
+                <a 
+                  href="mailto:weifong041623@gmail.com" 
+                  className="w-10 h-10 rounded-full bg-purple-900/50 border border-purple-500/30 flex items-center justify-center text-white hover:bg-purple-500/30 transition-colors"
+                >
                   <Mail className="w-5 h-5" />
                 </a>
               </div>
@@ -691,7 +704,7 @@ export default function App() {
           <div className="grid md:grid-cols-3 gap-6">
             {skillCategories.map((category, index) => (
               <Card key={index} className="bg-slate-900/50 border-white/10">
-                <CardContent className="p-6 pt-6">
+                <CardContent className="p-6">
                   {category.icon}
                   <h3 className="text-lg font-semibold text-white mb-4">{category.title}</h3>
                   <div className="flex flex-wrap gap-2">
@@ -736,7 +749,7 @@ export default function App() {
                       className="h-full w-full"
                     />
                   ) : projects[0].launchUrl ? (
-                    <div className="w-full h-full overflow-hidden">
+                    <div className="w-full h-full overflow-hidden relative">
                       <iframe
                         src={projects[0].launchUrl}
                         title={`${projects[0].title} preview`}
@@ -744,8 +757,11 @@ export default function App() {
                         style={{
                           width: '1920px',
                           height: '1080px',
-                          transform: 'scale(0.25)',
-                          transformOrigin: 'top left'
+                          transform: 'scale(0.333)',
+                          transformOrigin: 'top left',
+                          position: 'absolute',
+                          top: 0,
+                          left: 0
                         }}
                         loading="lazy"
                       />
@@ -825,7 +841,7 @@ export default function App() {
                       className="h-full w-full"
                     />
                   ) : project.launchUrl ? (
-                    <div className="w-full h-full overflow-hidden">
+                    <div className="w-full h-full overflow-hidden relative">
                       <iframe
                         src={project.launchUrl}
                         title={`${project.title} preview`}
@@ -833,8 +849,11 @@ export default function App() {
                         style={{
                           width: '1920px',
                           height: '1080px',
-                          transform: 'scale(0.25)',
-                          transformOrigin: 'top left'
+                          transform: 'scale(0.333)',
+                          transformOrigin: 'top left',
+                          position: 'absolute',
+                          top: 0,
+                          left: 0
                         }}
                         loading="lazy"
                       />
@@ -858,7 +877,7 @@ export default function App() {
                   )}
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-white pt-6 mb-2 group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
                     {project.title}
                   </h3>
                   <p className="text-slate-400 mb-6 line-clamp-3 leading-relaxed">
@@ -928,7 +947,7 @@ export default function App() {
                             className="h-full w-full"
                           />
                         ) : project.launchUrl ? (
-                          <div className="w-full h-full overflow-hidden">
+                          <div className="w-full h-full overflow-hidden relative">
                             <iframe
                               src={project.launchUrl}
                               title={`${project.title} preview`}
@@ -936,8 +955,11 @@ export default function App() {
                               style={{
                                 width: '1920px',
                                 height: '1080px',
-                                transform: 'scale(0.25)',
-                                transformOrigin: 'top left'
+                                transform: 'scale(0.333)',
+                                transformOrigin: 'top left',
+                                position: 'absolute',
+                                top: 0,
+                                left: 0
                               }}
                               loading="lazy"
                             />
@@ -961,7 +983,7 @@ export default function App() {
                         )}
                       </div>
                       <CardContent className="p-6">
-                        <h3 className="text-xl font-bold text-white pt-6 mb-2 group-hover:text-blue-400 transition-colors">
+                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
                           {project.title}
                         </h3>
                         <p className="text-slate-400 mb-6 line-clamp-3 leading-relaxed">
@@ -1050,14 +1072,27 @@ export default function App() {
               I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology.
             </p>
             <div className="flex justify-center gap-4">
-              <Button className="rounded-full px-8 bg-white text-slate-900 hover:bg-slate-200">
+              <Button 
+                className="rounded-full px-8 bg-white text-slate-900 hover:bg-slate-200"
+                onClick={() => window.location.href = 'mailto:weifong041623@gmail.com'}
+              >
                 <Mail className="mr-2 h-4 w-4" /> Contact Me
               </Button>
               <div className="flex gap-2">
-                <Button variant="outline" size="icon" className="rounded-full border-white/10 hover:bg-white/10 hover:text-white text-slate-400">
+                <Button 
+                  variant="outline" 
+                  size="icon" 
+                  className="rounded-full border-white/10 hover:bg-white/10 hover:text-white text-slate-400"
+                  onClick={() => window.open('https://github.com/WongWeiFong', '_blank', 'noopener,noreferrer')}
+                >
                   <Github className="h-4 w-4" />
                 </Button>
-                <Button variant="outline" size="icon" className="rounded-full border-white/10 hover:bg-white/10 hover:text-white text-slate-400">
+                <Button 
+                  variant="outline" 
+                  size="icon" 
+                  className="rounded-full border-white/10 hover:bg-white/10 hover:text-white text-slate-400"
+                  onClick={() => window.open('https://www.linkedin.com/in/weifongwong', '_blank', 'noopener,noreferrer')}
+                >
                   <Linkedin className="h-4 w-4" />
                 </Button>
               </div>
