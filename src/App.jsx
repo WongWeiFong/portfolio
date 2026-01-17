@@ -30,6 +30,7 @@ import me from "./assets/img/me.png";
 import pfp from "./assets/img/full_body.png";
 import resume from "./assets/WONG WEI FONG resume.pdf";
 
+
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
@@ -250,8 +251,8 @@ export default function App() {
     };
   }, []);
 
-  // Handle resume download and open
-  const handleResumeDownload = (e) => {
+   // Handle resume download and open
+   const handleResumeDownload = (e) => {
     e.preventDefault();
     
     // Create a temporary link element for download
@@ -261,10 +262,7 @@ export default function App() {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    
-    // Open the resume in a new tab
-    window.open(resume, '_blank');
-  };
+   };
 
   const experiences = [
     {
