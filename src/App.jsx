@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Github, Linkedin, Mail, ExternalLink, Code2, Terminal, Cloud, Briefcase, User, ChevronDown, ChevronUp, PenTool, GraduationCap, Sparkles, ArrowRight } from "lucide-react";
+import { Github, Linkedin, Mail, ExternalLink, Code2, Terminal, Cloud, Briefcase, User, ChevronDown, ChevronUp, PenTool, GraduationCap, Sparkles, ArrowRight, Download } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -28,6 +28,7 @@ import pythongpt2 from "./assets/img/pythongpt2.jpg";
 import pythongpt3 from "./assets/img/pythongpt3.jpg";
 import me from "./assets/img/me.png";
 import pfp from "./assets/img/full_body.png";
+import resume from "./assets/WONG WEI FONG resume.pdf";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -249,6 +250,22 @@ export default function App() {
     };
   }, []);
 
+  // Handle resume download and open
+  const handleResumeDownload = (e) => {
+    e.preventDefault();
+    
+    // Create a temporary link element for download
+    const link = document.createElement('a');
+    link.href = resume;
+    link.download = 'WONG WEI FONG RESUME.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    
+    // Open the resume in a new tab
+    window.open(resume, '_blank');
+  };
+
   const experiences = [
     {
       role: "Frontend Developer (Core Engineer)",
@@ -393,13 +410,20 @@ export default function App() {
       <header className="fixed top-0 left-0 right-0 w-full z-50 backdrop-blur-lg border-b border-white/10 bg-slate-950/50">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <span className="font-bold text-xl tracking-tight bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">WWF</span>
-          <nav className="hidden md:flex gap-6 text-sm font-medium text-slate-400">
+          <nav className="hidden md:flex gap-6 text-sm font-medium text-slate-400 items-center">
             <a href="" className="hover:text-white transition-colors">Home</a>
             <a href="#about" className="hover:text-white transition-colors">About</a>
             <a href="#experience" className="hover:text-white transition-colors">Experience</a>
             <a href="#skills" className="hover:text-white transition-colors">Skills</a>
             <a href="#projects" className="hover:text-white transition-colors">Projects</a>
             <a href="#connect" className="hover:text-white transition-colors">Connect</a>
+            <button 
+              onClick={handleResumeDownload}
+              className="px-4 py-2.5 rounded-full bg-gradient-to-r from-orange-400 to-yellow-400 text-slate-900 font-bold text-sm hover:from-orange-500 hover:to-yellow-500 transition-all duration-300 shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 flex items-center gap-2 cursor-pointer"
+            >
+              <Download className="w-4 h-4" />
+              Download Resume
+            </button>
           </nav>
         </div>
       </header>
