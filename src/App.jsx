@@ -26,6 +26,9 @@ import imaginehack2 from "./assets/img/imaginehack2.jpeg";
 import pythongpt1 from "./assets/img/pythongpt1.jpg";
 import pythongpt2 from "./assets/img/pythongpt2.jpg";
 import pythongpt3 from "./assets/img/pythongpt3.jpg";
+import antiJobScam1 from "./assets/img/antiJobScam1.png";
+import antiJobScam2 from "./assets/img/antiJobScam2.png";
+import antiJobScam3 from "./assets/img/antiJobScam3.png";
 import me from "./assets/img/me.png";
 import pfp from "./assets/img/full_body.png";
 import resume from "./assets/WONG WEI FONG resume.pdf";
@@ -342,6 +345,28 @@ export default function App() {
     },
     {
       id: 2,
+      title: "AutoSplit bill splitting application",
+      category: "WEB APPLICATION",
+      description: "AutoSplit is a bill splitting application that allows users to split bills with their friends. It also allows users to view the bill history and the bill details.",
+      technologies: ["REACT", "NESTJS", "EXPRESS", "POSTGRESQL", "TAILWIND CSS", "FRAMER MOTION", "JWT"],
+      livePreview: true,
+      images: [],
+      launchUrl: "https://autosplit-web.vercel.app/",
+      githubUrl: "https://github.com/WongWeiFong/AutoSplit"
+    },
+    {
+      id: 3,
+      title: "Anti Job Scam Website",
+      category: "WEB APPLICATION",
+      description: "Anti Job Scam Website is a website that allows users to apply for jobs and view the job details. Job post and job application are managed by the admin and the user.",
+      technologies: ["C#", "ASP.NET", "ENTITY FRAMEWORK", "AWS SERVER", "AWS LAMBDA", "AWS S3"],
+      livePreview: false,
+      images: [antiJobScam1, antiJobScam2, antiJobScam3],
+      launchUrl: "",
+      githubUrl: "https://github.com/AlphabetsAlphabets/ddac"
+    },
+    {
+      id: 4,
       title: "Gamer Token Hub (Web3 NFT Marketplace)",
       category: "WEB APPLICATION",
       description: "SpotWave allows you to search for and listen to Spotify songs with a preview and lyrics. You can also view the top tracks and artists in global rank and come with their all details such as bio, followers, and more.",
@@ -352,7 +377,7 @@ export default function App() {
       githubUrl: "https://github.com/Aiyern30/blockchain-fe"
     },
     {
-      id: 3,
+      id: 5,
       title: "ImagineHack 2025 (WARISAN DECODE)",
       category: "HACKATHON",
       description: "Warisan Decode is a gamified web experience designed to help users explore and understand Malaysia's rich heritage and cultural landmarks through interactive storytelling and puzzles.",
@@ -363,7 +388,7 @@ export default function App() {
       githubUrl: "https://github.com/YongXin315/warisan_decode"
     },
     {
-      id: 4,
+      id: 6,
       title: "Canva Hackathon (Poll Generator)",
       category: "HACKATHON",
       description: "Poll Generator is a Canva-integrated platform that simplifies poll and survey creation while providing real-time data visualization. Users can design visually appealing surveys, distribute them via QR codes or a dedicated website, and instantly see response trends. Multiple polls can be included in a single survey for comprehensive data collection.",
@@ -374,7 +399,7 @@ export default function App() {
       githubUrl: "https://github.com/Aiyern30/Canva-Hackathon"
     },
     {
-      id: 5,
+      id: 7,
       title: "Google Cloud Vertex AI Agent Builder Hackathon (PythonGPT)",
       category: "HACKATHON",
       description: "PythonGPT is a dynamic website designed to teach beginners how to code in Python. It offers Python documentation, Python code implementation examples, Python exercises, AI Chatbot Assistance",
@@ -886,7 +911,7 @@ export default function App() {
                     </div>
                   )}
                   <div className="absolute top-3 left-3 z-10">
-                    <Badge variant="outline" className="border-white/10 text-slate-400 bg-white/5 text-xs">
+                    <Badge variant="outline" className="border-white/10 text-slate-400 bg-black/35 text-xs">
                       {project.category}
                     </Badge>
                   </div>
@@ -992,7 +1017,7 @@ export default function App() {
                           </div>
                         )}
                         <div className="absolute top-3 left-3 z-10">
-                          <Badge variant="outline" className="border-white/10 text-slate-400 bg-white/5 text-xs">
+                          <Badge variant="outline" className="border-white/10 text-slate-400 bg-black/35 text-xs">
                             {project.category}
                           </Badge>
                         </div>
