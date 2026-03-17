@@ -322,7 +322,7 @@ export default function App() {
     {
       title: "Backend",
       icon: <Terminal className="w-6 h-6 mb-2 text-green-400" />,
-      skills: ["Node.js", "Express", "Python", "REST APIs"]
+      skills: ["Node.js", "Express", "PostgreSQL", "NestJS", "Python", "REST APIs"]
     },
     {
       title: "Cloud & DevOps",
@@ -1151,7 +1151,7 @@ export default function App() {
 
       {/* Footer */}
       <footer className="py-8 text-center text-slate-500 text-sm border-t border-white/5 bg-slate-950">
-        <p>© {new Date().getFullYear()} Wong Wei Fong. Crafted with React & Tailwind.</p>
+        <p>© {new Date().getFullYear()} Wong Wei Fong. Created with React & Tailwind.</p>
       </footer>
     </div>
   );
